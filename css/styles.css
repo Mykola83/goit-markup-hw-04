@@ -531,10 +531,7 @@ ul {
 .services-cover-text {
   position: absolute;
   background-color: var(--btn-color);
-  padding-top: 40px;
-  padding-right: 32px;
-  padding-bottom: 164px;
-  padding-left: 32px;
+  padding: 40px 32px; 
   top: 0;
   left: 0;
   transform: translateY(100%);

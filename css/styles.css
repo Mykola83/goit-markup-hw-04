@@ -42,6 +42,8 @@ ul {
 
 img {
   display: block;
+  box-shadow: зі значенням 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 /* --------------------- HEADER */
@@ -123,7 +125,7 @@ img {
 }
 
 .current::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 4px;
@@ -234,19 +236,22 @@ img {
   border: 1px solid #e7e9fc;
   border-radius: 4px;
   padding: 12px 24px;
-  transition: color var(--transition);
+  transition: color var(--transition), background-color var(--transition),
+    border-color var(--transition), box-shadow var(--transition);
 }
 .filter-button-item:hover {
   background-color: var(--btn-hover-color);
   color: var(--main-background-color);
   border: 1px solid transparent;
-  box-shadow: 0px 2px 2px 0px #0000001f;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .filter-button-item:focus {
   background-color: var(--btn-hover-color);
   color: var(--main-background-color);
   border: 1px solid transparent;
-  box-shadow: 0px 2px 2px 0px #0000001f;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* MISSION SECTION */
@@ -462,8 +467,7 @@ img {
   justify-content: center;
   color: #8e8f99;
   fill: #8e8f99;
-  transition:  border-color var(--transition),
-  color var(--transition);
+  transition: border-color var(--transition), color var(--transition);
 }
 
 .company-icon-link:hover {
@@ -565,7 +569,6 @@ img {
 .footer-section {
   display: flex;
   align-items: baseline;
-  flex-direction: row;
   background-color: var(--second-text-color);
   padding: 100px 0;
 }
@@ -595,11 +598,6 @@ img {
   max-width: 264px;
   color: var(--third-text-color);
   letter-spacing: 0.02em;
-}
-
-.soc-footer {
-  display: flex;
-  justify-content: center;
 }
 
 .footer-soc-list {

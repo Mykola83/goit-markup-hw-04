@@ -40,12 +40,6 @@ ul {
   margin: 0 auto;
 }
 
-img {
-  display: block;
-  box-shadow: зі значенням 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-}
-
 /* --------------------- HEADER */
 
 .header {
@@ -185,6 +179,7 @@ img {
 }
 
 /* ---------BUTOONS */
+
 .hero-button {
   display: block;
   min-width: 169px;
@@ -239,6 +234,7 @@ img {
   transition: color var(--transition), background-color var(--transition),
     border-color var(--transition), box-shadow var(--transition);
 }
+
 .filter-button-item:hover {
   background-color: var(--btn-hover-color);
   color: var(--main-background-color);
@@ -246,6 +242,7 @@ img {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
+
 .filter-button-item:focus {
   background-color: var(--btn-hover-color);
   color: var(--main-background-color);
@@ -513,12 +510,25 @@ img {
   box-shadow: 0px 1px 1px 0px #2e2f4229;
 }
 
+.services-link {
+  transition: box-shadow var(--transition);
+}
+
+.services-link:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.services-image {
+  display: block;
+}
+
 .services-cover-item {
   position: relative;
   overflow: hidden;
 }
 
-.services-cover-block {
+.services-cover-text {
   position: absolute;
   background-color: var(--btn-color);
   padding-top: 40px;
@@ -529,17 +539,16 @@ img {
   left: 0;
   transform: translateY(100%);
   transition: transform var(--transition);
-}
-
-.services-cover-item:hover .services-cover-block {
-  transform: translate(0);
-}
-
-.services-cover-text {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: #f4f4fd;
+  color: var(--third-text-color);
+  height: 100%;
+  width: 100%;
+}
+
+.services-link:hover .services-cover-text {
+  transform: translateY(0);
 }
 
 .services-title {
@@ -566,10 +575,13 @@ img {
 
 /* ----------------FOOTER */
 
+.footer {
+  background-color: var(--second-text-color);
+}
+
 .footer-section {
   display: flex;
   align-items: baseline;
-  background-color: var(--second-text-color);
   padding: 100px 0;
 }
 
